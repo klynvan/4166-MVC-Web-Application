@@ -1,0 +1,104 @@
+.topnavbar {
+  background-color: white;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  text-align: right;
+}
+
+.topnavbar li {
+  padding: 20px 20px;
+  display: inline-block;
+}
+
+.navoption {
+
+  text-decoration: none;
+  color: black;
+
+
+}
+
+
+#logo {
+  float: left;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  margin-left: 20px;
+  margin-top: 15px;
+
+}
+
+.bottomnav {
+  position: fixed;
+  width: 100%;
+  background-color: #14501F;
+
+}
+
+.bottomnav li {
+  display: flex;
+  padding: 20px 20px;
+  align-items: center;
+}
+
+.bottomnav a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.banner {
+  background-color: #A1C4A7;
+  margin-top: 75px;
+  text-align: center;
+  padding: 100px 0px;
+}
+
+#name {
+  color: #14501F;
+}
+
+#img1 {
+  height: 284px;
+  width: 400px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #14501F;
+  color: white;
+}
+
+#connection {
+  padding: 20px;
+}
+
+
+.success {
+  background: green;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.error {
+  background: red;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}

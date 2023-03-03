@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs')%>
+    <div class="banner">
+        <% if(errorMessages.length> 0){
+            errorMessages.forEach(message=>{ %>
+            <div class="error">
+                <%=message%>
+            </div>
+            <% }); }%>
+
+                <% if(successMessages.length> 0){
+                    successMessages.forEach(message=>{ %>
+                    <div class="success">
+                        <%=message%>
+                    </div>
+                    <% }); }%>
+
+                        <h2>Welcome, <%= user.firstName + " " + user.lastName %>
+                        </h2>
+
+                        <% if(connection.length) {%>
+                            <p>You have created the following connection</p>
+                            <%connection.forEach(connection=> {%>
+                                <a href="/connections/<%= connection._id%>">
+                                    <p>
+                                        <%=connection.title%>
+                                    </p>
+                                </a>
+                                <%}); } else {%>
+                                    <p>You have not created any connection</p>
+                                    <%}%>
+    </div>
+    <%- include('../partials/footer.ejs')%>

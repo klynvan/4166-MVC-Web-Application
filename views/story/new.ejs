@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs')%>
+    <div class="banner">
+        <form action='/connections' method='POST'>
+            <table>
+                <tr>
+                    <td><label for="topic">Topic</label></td>
+                    <td><input type="text" id="connectiontopic" name="connectiontopic" placeholder="Topic" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="title">Title</label></td>
+                    <td><input type="text" id="title" name="title" placeholder="Title" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="details">Details</label></td>
+                    <td><textarea name="details" id="details" cols="30" rows="10" required minlength="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="where">Where</label></td>
+                    <td><input type="text" id="where" name="where" placeholder="where" required></td>
+                </tr>
+                <tr>
+                    <td><label for="date">When</label></td>
+                    <td><input type="text" id="date" name="date" placeholder="mm\dd\year" required></td>
+                </tr>
+                <tr>
+                    <td><label for="starttime">Start</label></td>
+                    <td><input type="time" id="startTime" name="startTime" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="endtime">End</label></td>
+                    <td><input type="time" id="endTime" name="endTime" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="image">Image</label></td>
+                    <td><input type="url" id="image" name="image" required></td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" class="align-right"><button>Submit</button></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <%- include('../partials/footer.ejs')%>

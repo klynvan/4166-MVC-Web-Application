@@ -1,0 +1,51 @@
+<%- include('../partials/header.ejs')%>
+    <div class="banner">
+        <h2>
+            <%= connection.title %>
+        </h2>
+        <h4>
+            <%= connection.connectiontopic %>
+        </h4>
+        <h5> Hosted By: <%= connection.hostname.firstName + ' ' + connection.hostname.lastName%>
+        </h5>
+        <small>When: <%= connection.date %> Time: <%= connection.startTime%> to <%= connection.endTime%></small>
+        <small> Location: <%= connection.where %> </small>
+        <p>
+            <%= connection.topic %>
+        </p>
+        <div id="connection">
+            <%= connection.details%>
+        </div>
+        <img id="img1" src="<%= connection.image%>" alt="">
+        <%if(users==connection.hostname._id) {%>
+            <form action="">
+                <button type="submit" formmethod="GET" formaction="/connections/<%= connection._id%>/edit">Edit</button>
+                <button type="submit" formmethod="POST"
+                    formaction="/connections/<%= connection._id%>?_method=DELETE">Delete</button>
+            </form>
+            <%} else{ %>
+
+                <p>RSVP For The Event</p>
+                <p>
+                    <span id="display">0</span> RSVP
+                </p>
+                <form action="POST">
+                    <button id="btn" type="submit" formaction="/connections/<%= connection._id%>/rsvp"> Yes </button>
+                    <button type="submit" formaction="/connections/<%= connection._id%>/rsvp"> No </button>
+                    <button type="submit" formaction="/connections/<%= connection._id%>/rsvp"> Maybe </button>
+                </form>
+                <%}%>
+
+                    <script type="text/javascript">
+                        var count = 0;
+                        var btn = document.getElementById("btn");
+                        var disp = document.getElementById("display");
+
+                        btn.onclick = function () {
+                            count++;
+                            disp.innerHTML = count;
+                        }
+                    </script>
+
+    </div>
+    <%- include('../partials/footer.ejs')%>
